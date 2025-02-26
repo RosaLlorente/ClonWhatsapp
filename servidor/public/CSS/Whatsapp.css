@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-fondo-primario: rgba(38,37,36,255);
+    --color-fondo-secundario: rgba(32,44,51,255);
+    --color-fondo-terciario: rgba(20,30,37,255);
+    --color-fondo-cuarto: rgba(42,57,66);
+    --color-fondo-quintario: rgba(32,44,51);
+    --color-fondo-sextario: rgba(0,92,75);
+    --color-fondo-octario: rgba(42,57,66,255);
+
+    --color-borde-primario: rgba(227, 227, 227, 0.095);
+    --color-borde-secundario: rgba(51,59,64);
+
+    --color-texto-primario: rgb(255, 255, 255);
+    --color-texto-secundario: rgba(130, 142, 148, 0.174);
+}
+body{
+    background-color: var(--color-fondo-primario);
+    padding: 1em;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 1px var(--color-borde-primario);
+    background-color: var(--color-fondo-secundario);
+    height: 95vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+    border-right: inset 2px var(--color-borde-primario);
+    height: 100%;
+    width: 5%;
+}
+header svg{
+    width: 2.5rem;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+.contenedor-imagen{
+    width: 3rem;
+    height: 3rem; 
+    border-radius: 50%;
+    overflow: hidden; 
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* --------- */
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.Contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    height: 100%;
+    width: 35%;
+    background-color: var(--color-fondo-terciario);
+    border-right: inset 2px var(--color-borde-primario);
+}
+.Contenido  svg{
+    width: 2rem;
+}
+.Contenido nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto-primario);
+    gap: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 5em;
+}
+.Contenido nav div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.searchChat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    width: 95%;
+    height: 2.5em;
+    background-color: var(--color-fondo-secundario);
+    border-radius: 0.7em;
+    padding: 0.7em;
+}
+
+.searchChat svg{
+    width: 1.3em;
+}
+
+.searchChat input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: var(--color-texto-secundario);
+    font-size: 1em;
+}
+
+.searchChat input:focus 
+{
+    color: var(--color-texto-primario);
+    outline: none;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1em;
+    padding: 0.5em;
+    height: 100%;
+    
+}
+.ViewContact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    object-fit: cover;
+    gap: 1em;
+    color: var(--color-texto-primario);
+    border-top: 1px solid var(--color-borde-secundario);
+    border-bottom: 1px solid var(--color-borde-secundario);
+}
+.contact:hover{
+    background-color: var(--color-fondo-octario);
+}
+
+.ViewChat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+    height: 100%;
+    width: 78%;
+}
+.ViewChat nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto-primario);
+    gap: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 5em;
+    background-color: var(--color-fondo-secundario);
+}
+.ViewChat nav div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+.ViewChat nav .data-person{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.1em;
+}
+.ViewChat nav h2{
+    font-size: 1.3em;
+}
+.ViewChat nav svg{  
+    width: 1.3em;
+}
+.Chat
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    background-image: url(../Img/fondowsp.jpg);
+    background-position: center; 
+    max-height: 500px;
+    overflow-y: auto;
+}
+.Chat-Messages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+}
+.Message{
+    max-width: 70%;
+    word-wrap: break-word;
+    color: var(--color-texto-primario);
+    padding: 0.5em;
+    border-radius: 1em;
+    border-top-left-radius: 1em 0 1em 0;
+    position:relative;
+}
+.Message.otherperson{
+    align-self: flex-start;
+    justify-content: start;
+    background-color: var(--color-fondo-quintario);
+}
+.Message.otherperson:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -11px; 
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-top: 30px solid var(--color-fondo-quintario); 
+}
+.Message.me{
+    align-self: flex-end;
+    justify-content: end;
+    background-color: var(--color-fondo-sextario);
+}
+.Message.me:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px; 
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 30px solid var(--color-fondo-sextario); 
+}
+
+.Inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto-primario);
+    gap: 1.5em;
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    height: 5em;
+    background-color: var(--color-fondo-secundario);
+}
+.Inputs svg{
+    width: 1.3em;
+}
+.Inputs div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    width: 99%;
+    height: 99%;
+    gap: 1em;
+    background-color: var(--color-fondo-cuarto);
+    border-radius: 0.5em;
+}
+.Inputs div svg{
+    width: 1.5em;
+}
+
+.Inputs div input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: var(--color-texto-secundario);
+    font-size: 1em;
+    outline: none;
+}
+.Inputs div input:focus{
+    color: var(--color-texto-primario)
+}
+
+/* Personalizar la barra de desplazamiento */
+.Chat::-webkit-scrollbar {
+    width: 7px;
+}
+
+.Chat::-webkit-scrollbar-thumb {
+    background-color: var(--color-borde-secundario); 
+}
+
+.Chat::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+.Chat::-webkit-scrollbar-track {
+    background: transparent;
+}
